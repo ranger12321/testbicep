@@ -46,7 +46,7 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
 
 // Create a hosting plan for the Function App
 resource functionAppHostingPlan 'Microsoft.Web/serverfarms@2022-03-01' = {
-  name: functionAppName
+  name: '${functionAppName}-plan'
   location: location
   sku: {
     name: 'Y1'
